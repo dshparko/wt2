@@ -18,23 +18,23 @@ public class TabletPC extends Appliance {
         this.color = color;
     }
 
-    public  double getBatteryCapacity(double batteryCapacity){
+    public  double getBatteryCapacity(){
         return batteryCapacity;
     }
 
-    public double getDisplayInches(double displayInches){
+    public double getDisplayInches(){
         return displayInches;
     }
 
-    public double getMemoryRom(double memoryRom){
+    public double getMemoryRom(){
         return memoryRom;
     }
 
-    public double getFlashMemoryCapacity(double flashMemoryCapacity){
+    public double getFlashMemoryCapacity(){
         return flashMemoryCapacity;
     }
 
-    public Color getColor(Color color){
+    public Color getColor(){
         return color;
     }
 

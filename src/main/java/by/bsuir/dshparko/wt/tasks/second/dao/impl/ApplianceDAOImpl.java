@@ -1,6 +1,7 @@
 package by.bsuir.dshparko.wt.tasks.second.dao.impl;
 
 import by.bsuir.dshparko.wt.tasks.second.dao.ApplianceDAO;
+import by.bsuir.dshparko.wt.tasks.second.dao.DAOException;
 import by.bsuir.dshparko.wt.tasks.second.entity.Appliance;
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.Criteria;
 import org.w3c.dom.Document;
@@ -33,21 +34,21 @@ public class ApplianceDAOImpl implements ApplianceDAO {
     public boolean add(String applianceName, Appliance appliance)  {
         try {
 
-        } catch (TransformerException | EnumConstantNotPresentException e) {
+        } catch (EnumConstantNotPresentException e) {
 
         }
         return true;
     }
 
 
-    private Document getDocument(String fileName)  {
+    private Document getDocument(String fileName) throws DAOException {
         Document document;
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             document = documentBuilder.parse(Objects.requireNonNull(getClass().getClassLoader().getResource(fileName)).getFile());
             document.getDocumentElement().normalize();
         } catch (ParserConfigurationException | IOException | SAXException e) {
-            throw new DaoException(e);
+            throw new DAOException(e);
         }
         return document;
     }

@@ -1,31 +1,30 @@
 package by.bsuir.dshparko.wt.tasks.second.entity.criteria;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Criteria {
 
-    private final String searchCriteria;
+    private final Map<String, Object> criteriaMap = new HashMap<>();
 
-    private final String searchType;
+    private final String groupSearchName;
 
-    private final Object value;
 
-    public String getSearchCriteria() {
-        return searchCriteria;
+    public Criteria(String groupSearchName) {
+        this.groupSearchName = groupSearchName;
     }
 
 
-    public String getSearchType() {
-        return searchType;
+    public String getGroupSearchName() {
+        return groupSearchName;
     }
 
 
-    public Object getValue() {
-        return value;
+    public Map<String, Object> getCriteriaMap() {
+        return criteriaMap;
     }
 
-
-    public Criteria(String searchCriteria, String searchType, Object value) {
-        this.searchCriteria = searchCriteria;
-        this.searchType = searchType;
-        this.value = value;
+    public void add(String searchCriteria, Object value) {
+        criteriaMap.put(searchCriteria, value);
     }
 }
