@@ -1,14 +1,22 @@
-package by.bsuir.dshparko.wt.tasks.second.dao.applianceMatcher.impl;
+package by.bsuir.dshparko.wt.tasks.second.dao.appliance_matcher.impl;
 
-import by.bsuir.dshparko.wt.tasks.second.dao.applianceMatcher.ApplianceMatcherFactory;
+import by.bsuir.dshparko.wt.tasks.second.dao.appliance_matcher.ApplianceMatcherFactory;
 import by.bsuir.dshparko.wt.tasks.second.dao.constant.ApplianceTagName;
 import by.bsuir.dshparko.wt.tasks.second.entity.Appliance;
 import by.bsuir.dshparko.wt.tasks.second.entity.CPU;
 import by.bsuir.dshparko.wt.tasks.second.entity.Laptop;
 import by.bsuir.dshparko.wt.tasks.second.entity.OS;
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.SearchCriteria;
-
+/**
+ * LaptopMatcher class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class LaptopMatcher extends ApplianceMatcherFactory {
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isMatchesCriteria(Appliance appliance, String criteriaName, Object value) {
         Laptop laptop = (Laptop) appliance;

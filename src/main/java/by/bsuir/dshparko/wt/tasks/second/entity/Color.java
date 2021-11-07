@@ -1,5 +1,10 @@
 package by.bsuir.dshparko.wt.tasks.second.entity;
-
+/**
+ * Color enum for providing colors.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public enum Color {
     BLUE,
     YELLOW,

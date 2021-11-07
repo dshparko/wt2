@@ -2,9 +2,17 @@ package by.bsuir.dshparko.wt.tasks.second.service.validation.impl;
 
 import by.bsuir.dshparko.wt.tasks.second.entity.FilterType;
 import by.bsuir.dshparko.wt.tasks.second.service.validation.CriteriaValidator;
-
+/**
+ * FilterTypeValidator class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class FilterTypeValidator implements CriteriaValidator {
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isCriteriaValid(Object value) {
         try {

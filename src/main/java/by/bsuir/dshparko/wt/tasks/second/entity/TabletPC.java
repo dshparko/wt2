@@ -1,15 +1,53 @@
 package by.bsuir.dshparko.wt.tasks.second.entity;
 
+import java.io.Serializable;
 import java.util.Objects;
-
-public class TabletPC extends Appliance {
-    private double price;
+/**
+ * TabletPC class with properties <b>price</b>, <b>batteryCapacity</b>,
+ * <b>displayInches</b>, <b>memoryRom</b>, <b>flashMemoryCapacity</b>, <b>color</b>.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
+public class TabletPC extends Appliance implements Serializable {
+    /**
+     * Field batteryCapacity of {@link TabletPC}
+     */
     private double batteryCapacity;
+    /**
+     * Field displayInches of {@link TabletPC}
+     */
     private double displayInches;
+    /**
+     * Field memoryRom of {@link TabletPC}
+     */
     private double memoryRom;
+    /**
+     * Field flashMemoryCapacity of {@link TabletPC}
+     */
     private double flashMemoryCapacity;
+    /**
+     * Field {@link Color} of {@link TabletPC}
+     */
     private Color color;
-    public TabletPC(double price, double batteryCapacity, double displayInches, double memoryRom, double flashMemoryCapacity, Color color){
+
+    /**
+     * Parameterless {@link TabletPC} constructor
+     */
+    public TabletPC() {
+    }
+
+    /**
+     * {@link TabletPC} constructor with parameters
+     *
+     * @param price               price
+     * @param batteryCapacity     battery capacity
+     * @param displayInches       display inches
+     * @param memoryRom           memory rom
+     * @param flashMemoryCapacity flash memory capacity
+     * @param color               {@link Color}
+     */
+    public TabletPC(double price, double batteryCapacity, double displayInches, double memoryRom, double flashMemoryCapacity, Color color) {
         super(price);
         this.batteryCapacity = batteryCapacity;
         this.displayInches = displayInches;
@@ -18,23 +56,48 @@ public class TabletPC extends Appliance {
         this.color = color;
     }
 
-    public  double getBatteryCapacity(){
+    /**
+     * Gets batteryCapacity value
+     *
+     * @return batteryCapacity
+     */
+    public double getBatteryCapacity() {
         return batteryCapacity;
     }
 
-    public double getDisplayInches(){
+    /**
+     * Gets displayInches value
+     *
+     * @return displayInches
+     */
+    public double getDisplayInches() {
         return displayInches;
     }
 
-    public double getMemoryRom(){
+    /**
+     * Gets memoryRom value
+     *
+     * @return memoryRom
+     */
+    public double getMemoryRom() {
         return memoryRom;
     }
 
-    public double getFlashMemoryCapacity(){
+    /**
+     * Gets flashMemoryCapacity value
+     *
+     * @return flashMemoryCapacity
+     */
+    public double getFlashMemoryCapacity() {
         return flashMemoryCapacity;
     }
 
-    public Color getColor(){
+    /**
+     * Gets color value
+     *
+     * @return {@link Color}
+     */
+    public Color getColor() {
         return color;
     }
 
@@ -44,7 +107,7 @@ public class TabletPC extends Appliance {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         TabletPC tabletPC = (TabletPC) o;
-        return color == tabletPC.color && Double.compare(tabletPC.displayInches, displayInches) == 0 && flashMemoryCapacity == tabletPC.flashMemoryCapacity && Double.compare(tabletPC.memoryRom, memoryRom) == 0 && Double.compare(tabletPC.batteryCapacity, batteryCapacity) == 0 ;
+        return Double.compare(tabletPC.batteryCapacity, batteryCapacity) == 0 && Double.compare(tabletPC.displayInches, displayInches) == 0 && memoryRom == tabletPC.memoryRom && flashMemoryCapacity == tabletPC.flashMemoryCapacity && color == tabletPC.color;
     }
 
     @Override
@@ -63,4 +126,5 @@ public class TabletPC extends Appliance {
                 ", color=" + color +
                 '}';
     }
+
 }

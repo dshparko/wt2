@@ -3,9 +3,6 @@ package by.bsuir.dshparko.wt.tasks.second.main;
 import by.bsuir.dshparko.wt.tasks.second.dao.DAOException;
 import by.bsuir.dshparko.wt.tasks.second.dao.constant.ApplianceTagName;
 import by.bsuir.dshparko.wt.tasks.second.entity.Appliance;
-import by.bsuir.dshparko.wt.tasks.second.entity.CPU;
-import by.bsuir.dshparko.wt.tasks.second.entity.Laptop;
-import by.bsuir.dshparko.wt.tasks.second.entity.OS;
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.Criteria;
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.SearchCriteria;
 import by.bsuir.dshparko.wt.tasks.second.service.ApplianceService;
@@ -35,24 +32,24 @@ public class Main {
             //////////////////////////////////////////////////////////////////
 
             Criteria criteriaOven = new Criteria(ApplianceTagName.OVEN.name());
-            criteriaOven.add(SearchCriteria.Oven.HEIGHT.name(), 45.0);
             criteriaOven.add(SearchCriteria.Oven.DEPTH.name(), 60.0);
+            criteriaOven.add(SearchCriteria.Oven.HEIGHT.name(), 30.0);
 
             appliances = service.find(criteriaOven);
 
-            System.out.println("\nFind all ovens that HEIGHT is 45.0, DEPTH is 60.0.");
+            System.out.println("\nFind all ovens that HEIGHT is 30.0, DEPTH is 60.0.");
             PrinterApplianceInfo.print(appliances);
 
             //////////////////////////////////////////////////////////////////
 
             Criteria criteriaTabletPC = new Criteria(ApplianceTagName.TABLET_PC.name());
-            criteriaTabletPC.add(SearchCriteria.TabletPC.COLOR.name(), "BLUE");
+            criteriaTabletPC.add(SearchCriteria.TabletPC.COLOR.name(), "GREEN");
             criteriaTabletPC.add(SearchCriteria.TabletPC.DISPLAY_INCHES.name(), 15.0);
             criteriaTabletPC.add(SearchCriteria.TabletPC.MEMORY_ROM.name(), 12000.0);
 
             appliances = service.find(criteriaTabletPC);
 
-            System.out.println("\nFind all tabletPC-s that COLOR is BLUE, DISPLAY_INCHES is 15.0, MEMORY_ROM is 12000.0.");
+            System.out.println("\nFind all tabletPC-s that COLOR is GREEN, DISPLAY_INCHES is 15.0, MEMORY_ROM is 12000.0.");
             PrinterApplianceInfo.print(appliances);
 
             //////////////////////////////////////////////////////////////////

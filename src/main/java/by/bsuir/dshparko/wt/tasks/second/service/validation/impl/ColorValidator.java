@@ -2,9 +2,17 @@ package by.bsuir.dshparko.wt.tasks.second.service.validation.impl;
 
 import by.bsuir.dshparko.wt.tasks.second.entity.Color;
 import by.bsuir.dshparko.wt.tasks.second.service.validation.CriteriaValidator;
-
+/**
+ * ColorValidator class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class ColorValidator implements CriteriaValidator {
-    @Override
+
+    /**
+     * {@inheritDoc}
+     */@Override
     public boolean isCriteriaValid(Object value) {
         try {
             Color.valueOf((String) value);

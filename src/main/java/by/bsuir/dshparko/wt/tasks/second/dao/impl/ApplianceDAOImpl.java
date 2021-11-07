@@ -2,7 +2,7 @@ package by.bsuir.dshparko.wt.tasks.second.dao.impl;
 
 import by.bsuir.dshparko.wt.tasks.second.dao.ApplianceDAO;
 import by.bsuir.dshparko.wt.tasks.second.dao.DAOException;
-import by.bsuir.dshparko.wt.tasks.second.dao.applianceMatcher.ApplianceMatcherFactory;
+import by.bsuir.dshparko.wt.tasks.second.dao.appliance_matcher.ApplianceMatcherFactory;
 import by.bsuir.dshparko.wt.tasks.second.dao.appliance_xml_factory.ApplianceXMLFactory;
 import by.bsuir.dshparko.wt.tasks.second.dao.constant.ResourceConst;
 import by.bsuir.dshparko.wt.tasks.second.dao.creator.ApplianceCreator;
@@ -23,15 +23,21 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-
+/**
+ * ApplianceDAOImpl class.
+ * Implements {@link ApplianceDAO}.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class ApplianceDAOImpl implements ApplianceDAO {
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public List<Appliance> find(Criteria criteria) throws DAOException {
         List<Appliance> appliances = new ArrayList<>();
@@ -63,7 +69,9 @@ public class ApplianceDAOImpl implements ApplianceDAO {
         return appliances;
     }
 
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean add(String applianceName, Appliance appliance) throws DAOException {
         try {
@@ -85,7 +93,14 @@ public class ApplianceDAOImpl implements ApplianceDAO {
         return true;
     }
 
-
+    /**
+     * Reads the information from xml file (the name of this file
+     * is from {@link ResourceConst}, it is in the resource folder).
+     *
+     * @param fileName name of XML-file
+     * @return {@link Document}
+     * @throws DAOException when throwing an exception on a DAO layer
+     */
     private Document getDocument(String fileName) throws DAOException {
         Document document;
         try {

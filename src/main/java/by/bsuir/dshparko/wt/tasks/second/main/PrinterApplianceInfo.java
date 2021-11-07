@@ -3,13 +3,25 @@ package by.bsuir.dshparko.wt.tasks.second.main;
 import by.bsuir.dshparko.wt.tasks.second.entity.Appliance;
 
 import java.util.List;
-
+/**
+ * PrinterApplianceInfo class.
+ * Class for printing info about found appliances.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class PrinterApplianceInfo {
     private static final String APPLIANCES_LIST_NULL_EXCEPTION_MSG = "AppliancesList is null.\nAppliancesList cannot be null!";
     private static final String APPLIANCES_LIST_EMPTY_MSG = "AppliancesList is empty (appliances not found).";
 
-
-    public static void print(List<Appliance> appliances) {
+    /**
+     * Prints the information about all found appliances.
+     * Prints APPLIANCES_LIST_NULL_EXCEPTION_MSG if list is null.
+     * Prints APPLIANCES_LIST_EMPTY_MSG if list is empty.
+     *
+     * @param appliances {@link List<Appliance>}
+     */
+public static void print(List<Appliance> appliances) {
         if (appliances == null) {
             throw new NullPointerException(APPLIANCES_LIST_NULL_EXCEPTION_MSG);
         } else if (appliances.isEmpty()) {

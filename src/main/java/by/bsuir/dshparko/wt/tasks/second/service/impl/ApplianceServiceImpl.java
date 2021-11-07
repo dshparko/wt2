@@ -11,24 +11,39 @@ import by.bsuir.dshparko.wt.tasks.second.service.constant.ServiceExceptionMessag
 import by.bsuir.dshparko.wt.tasks.second.service.validation.Validator;
 
 import java.util.List;
-
+/**
+ * ApplianceServiceImpl class.
+ * Implements {@link ApplianceService} and works with {@link by/bsuir/dshparko/wt/tasks/second/dao/ApplianceDAO.java}.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class ApplianceServiceImpl implements ApplianceService {
 
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public List<Appliance> find(Criteria criteria) throws ServiceException, DAOException {
+    public List<Appliance> find(Criteria criteria) throws ServiceException {
         if (!Validator.isCriteriaValid(criteria)) {
             throw new ServiceException(ServiceExceptionMessage.INVALID_CRITERIA_EXCEPTION_MSG.getMessage());
         }
 
         List<Appliance> appliances;
-        DAOFactory factory = DAOFactory.getInstance();
-        ApplianceDAO applianceDAO = factory.getApplianceDAO();
-        appliances = applianceDAO.find(criteria);
+        try {
+            DAOFactory factory = DAOFactory.getInstance();
+            ApplianceDAO applianceDAO = factory.getApplianceDAO();
+            appliances = applianceDAO.find(criteria);
+        } catch (DAOException e) {
+            throw new ServiceException(e);
+        }
         return appliances;
     }
 
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean add(String applianceName, Appliance appliance) throws DAOException, ServiceException {
         if (applianceName.isEmpty() || appliance == null) {

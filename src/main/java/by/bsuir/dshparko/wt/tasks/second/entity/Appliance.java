@@ -1,15 +1,40 @@
 package by.bsuir.dshparko.wt.tasks.second.entity;
 
+import java.io.Serializable;
 import java.util.Objects;
+/**
+ * Appliance class with property <b>price</b>.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
+public class Appliance implements Serializable {
 
-public class Appliance {
+    /**
+     * Field price - price of {@link Appliance}
+     */
     private double price;
 
+    /**
+     * Parameterless {@link Appliance} constructor
+     */
     public Appliance() {
     }
+
+    /**
+     * {@link Appliance} constructor with a parameter
+     *
+     * @param price price
+     */
     public Appliance(double price) {
         this.price = price;
     }
+
+    /**
+     * Gets price value
+     *
+     * @return price
+     */
     public double getPrice() {
         return price;
     }

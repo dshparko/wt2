@@ -8,7 +8,12 @@ import by.bsuir.dshparko.wt.tasks.second.entity.TabletPC;
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.SearchCriteria;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
+/**
+ * TabletPCCreator class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class TabletPCCreator  extends ApplianceCreator {
     private double price;
     private double batteryCapacity;
@@ -16,7 +21,9 @@ public class TabletPCCreator  extends ApplianceCreator {
     private double memoryRom;
     private double flashMemoryCapacity;
     private Color color;
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Appliance createAppliance(NodeList nodeList) {
         for (int i = 0; i < nodeList.getLength(); i++) {

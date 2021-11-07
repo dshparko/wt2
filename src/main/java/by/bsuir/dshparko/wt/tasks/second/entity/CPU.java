@@ -1,5 +1,10 @@
 package by.bsuir.dshparko.wt.tasks.second.entity;
-
+/**
+ *CPU enum for providing types of cpu.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public enum CPU {
     AMD_RYZEN_5_5600X,
     AMD_RYZEN_9_5950X,

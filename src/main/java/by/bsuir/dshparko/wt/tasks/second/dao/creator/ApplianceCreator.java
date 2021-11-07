@@ -7,10 +7,27 @@ import by.bsuir.dshparko.wt.tasks.second.dao.creator.impl.OvenCreator;
 import by.bsuir.dshparko.wt.tasks.second.dao.creator.impl.TabletPCCreator;
 import by.bsuir.dshparko.wt.tasks.second.entity.Appliance;
 import org.w3c.dom.NodeList;
-
+/**
+ * ApplianceCreator abstract class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public abstract class ApplianceCreator {
+    /**
+     * Creates a specific appliance.
+     *
+     * @param nodeList {@link NodeList}
+     * @return {@link Appliance} specific appliance
+     */
     public abstract Appliance createAppliance(NodeList nodeList);
-
+    /**
+     * Gets {@link ApplianceCreator} from its applianceName.
+     * If an error occurs, an {@link IllegalArgumentException} is thrown.
+     *
+     * @param applianceName name of {@link Appliance}
+     * @return {@link ApplianceCreator} specific ApplianceFactory
+     */
     public static ApplianceCreator getAppliance(String applianceName) throws EnumConstantNotPresentException {
         try {
             return switch (ApplianceTagName.valueOf(applianceName)) {

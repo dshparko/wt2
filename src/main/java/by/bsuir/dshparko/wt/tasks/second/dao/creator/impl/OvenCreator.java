@@ -7,7 +7,12 @@ import by.bsuir.dshparko.wt.tasks.second.entity.Oven;
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.SearchCriteria;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
+/**
+ * OvenCreator class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class OvenCreator  extends ApplianceCreator {
     private double price;
     private double powerConsumption;
@@ -16,7 +21,9 @@ public class OvenCreator  extends ApplianceCreator {
     private double depth;
     private double height;
     private double width;
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Appliance createAppliance(NodeList nodeList) {
         for (int i = 0; i < nodeList.getLength(); i++) {

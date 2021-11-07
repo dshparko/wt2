@@ -6,10 +6,20 @@ import by.bsuir.dshparko.wt.tasks.second.service.validation.impl.*;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * CriteriaValidatorFactory class with properties <b>instance</b> and <b>validators</b>.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class CriteriaValidatorFactory {
+    /**
+     * Field instance - instance of {@link CriteriaValidatorFactory}
+     */
     private static final CriteriaValidatorFactory instance = new CriteriaValidatorFactory();
-
+    /**
+     * Field validators - {@link HashMap} of validators
+     */
     private final Map<String, CriteriaValidator> validators = new HashMap<>();
 
     //In future plans, this initialization of validators will be
@@ -46,15 +56,27 @@ public class CriteriaValidatorFactory {
         validators.put(SearchCriteria.Freezer.WIDTH.name(), new WidthValidator());
         validators.put(SearchCriteria.Freezer.HEIGHT.name(), new HeightValidator());
     }
-
+    /**
+     * Private constructor to close the ability of instantiating {@link CriteriaValidatorFactory}.
+     */
     private CriteriaValidatorFactory() {
     }
 
-
+    /**
+     * Gets instance of {@link CriteriaValidatorFactory}
+     *
+     * @return {@link CriteriaValidatorFactory} instance
+     */
     public static CriteriaValidatorFactory getInstance() {
         return instance;
     }
-
+    /**
+     * Gets {@link CriteriaValidator} for a specific {@link SearchCriteria}
+     * If there is no such {@link SearchCriteria}, an {@link IllegalArgumentException} is thrown.
+     *
+     * @param criteriaName criteriaName to get validator
+     * @return {@link CriteriaValidator}  specific validator
+     */
     public CriteriaValidator getValidator(String criteriaName) {
         if (validators.containsKey(criteriaName)) {
             return validators.get(criteriaName);

@@ -8,8 +8,16 @@ import by.bsuir.dshparko.wt.tasks.second.entity.criteria.SearchCriteria;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
-
+/**
+ * TabletPCXMLFactory class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class TabletPCXMLFactory extends ApplianceXMLFactory {
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Node createApplianceXML(Document document, Appliance appliance) {
         TabletPC tabletPC = (TabletPC) appliance;

@@ -1,9 +1,20 @@
 package by.bsuir.dshparko.wt.tasks.second.service.validation;
 
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.Criteria;
-
+/**
+ * Validator class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class Validator {
-    public static boolean isCriteriaValid(Criteria criteria) {
+
+    /**
+     * Validates criteria by its {@link by/bsuir/dshparko/wt/tasks/second/entity/criteria/SearchCriteria.java}.
+     *
+     * @param criteria {@link Criteria} to validate
+     * @return true if criteria is valid. Otherwise, false.
+     */public static boolean isCriteriaValid(Criteria criteria) {
         if (criteria == null) {
             return false;
         }

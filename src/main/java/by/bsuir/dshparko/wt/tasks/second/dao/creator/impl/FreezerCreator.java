@@ -7,14 +7,21 @@ import by.bsuir.dshparko.wt.tasks.second.entity.Freezer;
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.SearchCriteria;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
+/**
+ * FreezerCreator class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class FreezerCreator extends ApplianceCreator {
     private double price;
     private double depth;
     private double height;
     private double width;
     private double freezerCapacity;
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Appliance createAppliance(NodeList nodeList) {
         for (int i = 0; i < nodeList.getLength(); i++) {

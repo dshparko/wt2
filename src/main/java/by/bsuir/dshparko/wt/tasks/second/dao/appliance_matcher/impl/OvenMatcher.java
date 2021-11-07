@@ -1,13 +1,21 @@
-package by.bsuir.dshparko.wt.tasks.second.dao.applianceMatcher.impl;
+package by.bsuir.dshparko.wt.tasks.second.dao.appliance_matcher.impl;
 
-import by.bsuir.dshparko.wt.tasks.second.dao.applianceMatcher.ApplianceMatcherFactory;
+import by.bsuir.dshparko.wt.tasks.second.dao.appliance_matcher.ApplianceMatcherFactory;
 import by.bsuir.dshparko.wt.tasks.second.dao.constant.ApplianceTagName;
 import by.bsuir.dshparko.wt.tasks.second.entity.Appliance;
 import by.bsuir.dshparko.wt.tasks.second.entity.Oven;
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.SearchCriteria;
 
-
+/**
+ * OvenMatcher class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class OvenMatcher extends ApplianceMatcherFactory {
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isMatchesCriteria(Appliance appliance, String criteriaName, Object value) {
         Oven oven = (Oven) appliance;

@@ -9,7 +9,12 @@ import by.bsuir.dshparko.wt.tasks.second.entity.OS;
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.SearchCriteria;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
+/**
+ * LaptopFactory class.
+ *
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class LaptopCreator  extends ApplianceCreator {
     private double price;
     private double batteryCapacity;
@@ -17,7 +22,9 @@ public class LaptopCreator  extends ApplianceCreator {
     private double memoryRom;
     private CPU cpu;
     private double displayInches;
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Appliance createAppliance(NodeList nodeList) {
         for (int i = 0; i < nodeList.getLength(); i++) {

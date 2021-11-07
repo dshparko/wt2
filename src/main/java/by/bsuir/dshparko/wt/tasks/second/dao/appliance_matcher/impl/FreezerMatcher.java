@@ -1,14 +1,21 @@
-package by.bsuir.dshparko.wt.tasks.second.dao.applianceMatcher.impl;
+package by.bsuir.dshparko.wt.tasks.second.dao.appliance_matcher.impl;
 
 
-import by.bsuir.dshparko.wt.tasks.second.dao.applianceMatcher.ApplianceMatcherFactory;
+import by.bsuir.dshparko.wt.tasks.second.dao.appliance_matcher.ApplianceMatcherFactory;
 import by.bsuir.dshparko.wt.tasks.second.dao.constant.ApplianceTagName;
 import by.bsuir.dshparko.wt.tasks.second.entity.Appliance;
 import by.bsuir.dshparko.wt.tasks.second.entity.Freezer;
 import by.bsuir.dshparko.wt.tasks.second.entity.criteria.SearchCriteria;
 
+/**
+ * FreezerMatcher Class
+ * @author Darya Shparko
+ * @version 1.0
+ */
 public class FreezerMatcher  extends ApplianceMatcherFactory {
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isMatchesCriteria(Appliance appliance, String criteriaName, Object value) {
         Freezer freezer = (Freezer) appliance;
