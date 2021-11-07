@@ -8,8 +8,8 @@
             <xs:sequence>
                 <xs:element name="oven" type="tns:ovenType" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="laptop" type="tns:laptopType" minOccurs="0" maxOccurs="unbounded"/>
-                <xs:element name="refrigerator" type="tns:refrigeratorType" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="tablet-PC" type="tns:tabletPCType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="freezer" type="tns:freezerType" minOccurs="0" maxOccurs="unbounded"/>
           </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -37,18 +37,6 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="refrigeratorType">
-        <xs:sequence>
-            <xs:element name="price" type="xs:double"/>
-            <xs:element name="power-consumption" type="xs:double"/>
-            <xs:element name="weight" type="xs:double"/>
-            <xs:element name="freezer-capacity" type="xs:double"/>
-            <xs:element name="overall-capacity" type="xs:double"/>
-            <xs:element name="height" type="xs:double"/>
-            <xs:element name="width" type="xs:double"/>
-        </xs:sequence>
-    </xs:complexType>
-
 
     <xs:complexType name="tabletPCType">
         <xs:sequence>
@@ -61,12 +49,13 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="freezer">
+    <xs:complexType name="freezerType">
         <xs:sequence>
             <xs:element name="price" type="xs:double"/>
             <xs:element name="freezer-capacity" type="xs:double"/>
             <xs:element name="width" type="xs:double"/>
             <xs:element name="height" type="xs:double"/>
+            <xs:element name="depth" type="xs:double"/>
         </xs:sequence>
     </xs:complexType>
 

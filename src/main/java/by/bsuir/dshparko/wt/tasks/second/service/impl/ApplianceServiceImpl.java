@@ -16,7 +16,7 @@ public class ApplianceServiceImpl implements ApplianceService {
 
 
     @Override
-    public List<Appliance> find(Criteria criteria) throws ServiceException {
+    public List<Appliance> find(Criteria criteria) throws ServiceException, DAOException {
         if (!Validator.isCriteriaValid(criteria)) {
             throw new ServiceException(ServiceExceptionMessage.INVALID_CRITERIA_EXCEPTION_MSG.getMessage());
         }

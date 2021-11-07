@@ -5,9 +5,7 @@ import by.bsuir.dshparko.wt.tasks.second.service.validation.CriteriaValidator;
 public class WeightValidator implements CriteriaValidator {
     private final static double MIN_WEIGHT = 0.0;
 
-    /**
-     * {@inheritDoc}
-     */
+
     @Override
     public boolean isCriteriaValid(Object value) {
         if (value instanceof Double) {

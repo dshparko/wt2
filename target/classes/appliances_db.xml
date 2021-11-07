@@ -55,30 +55,12 @@
 
     <freezer>
         <price>1000.0</price>
-        <power-consumption>100.0</power-consumption>
-        <weight>20.0</weight>
+        <freezer-capacity>100.0</freezer-capacity>
+        <width>20.0</width>
         <freezer-capacity>10.0</freezer-capacity>
         <height>200.0</height>
         <width>70.0</width>
     </freezer>
-    <refrigerator>
-        <price>1400.0</price>
-        <power-consumption>150.0</power-consumption>
-        <weight>25.0</weight>
-        <freezer-capacity>20.0</freezer-capacity>
-        <overall-capacity>350.0</overall-capacity>
-        <height>150.0</height>
-        <width>50.0</width>
-    </refrigerator>
-    <refrigerator>
-        <price>1300.0</price>
-        <power-consumption>150.0</power-consumption>
-        <weight>40.0</weight>
-        <freezer-capacity>20.0</freezer-capacity>
-        <overall-capacity>400.0</overall-capacity>
-        <height>300.0</height>
-        <width>150.0</width>
-    </refrigerator>
 
     <tablet-PC>
         <price>1000.0</price>

@@ -43,7 +43,7 @@ public class CriteriaValidatorFactory {
 
         validators.put(SearchCriteria.Freezer.DEPTH.name(), new DepthValidator());
         validators.put(SearchCriteria.Freezer.FREEZER_CAPACITY.name(), new FreezerCapacityValidator());
-        validators.put(SearchCriteria.Freezer.WIDTH.name(), new WeightValidator());
+        validators.put(SearchCriteria.Freezer.WIDTH.name(), new WidthValidator());
         validators.put(SearchCriteria.Freezer.HEIGHT.name(), new HeightValidator());
     }
 

@@ -62,7 +62,7 @@ public class Main {
 
             appliances = service.find(criteriaFreezer);
 
-            System.out.println("\nFind all speakers that price is more than 300.0.");
+            System.out.println("\nFind all freezer that price is more than 300.0.");
             PrinterApplianceInfo.print(appliances);
 
             //////////////////////////////////////////////////////////////////
@@ -76,8 +76,6 @@ public class Main {
             PrinterApplianceInfo.print(appliances);
 
             //////////////////////////////////////////////////////////////////
-
-            service.add(ApplianceTagName.LAPTOP.name(), new Laptop(1000.0, 1000.0, OS.LINUX, 100.0, CPU.AMD_RYZEN_5_5600X, 13.6));
 
         } catch (DAOException | ServiceException | NullPointerException exception) {
             System.err.println(exception.getLocalizedMessage());

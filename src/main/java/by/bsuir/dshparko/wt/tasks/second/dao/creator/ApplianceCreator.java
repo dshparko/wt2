@@ -11,7 +11,7 @@ import org.w3c.dom.NodeList;
 public abstract class ApplianceCreator {
     public abstract Appliance createAppliance(NodeList nodeList);
 
-    public static ApplianceCreator getApplianceFactory(String applianceName) throws EnumConstantNotPresentException {
+    public static ApplianceCreator getAppliance(String applianceName) throws EnumConstantNotPresentException {
         try {
             return switch (ApplianceTagName.valueOf(applianceName)) {
                 case LAPTOP -> new LaptopCreator();

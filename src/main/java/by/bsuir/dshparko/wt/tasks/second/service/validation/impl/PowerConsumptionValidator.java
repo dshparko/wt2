@@ -6,9 +6,7 @@ public class PowerConsumptionValidator implements CriteriaValidator {
     private final static double MIN_POWER_CONSUMPTION = 0.0;
     private final static double MAX_POWER_CONSUMPTION = 100000.0;
 
-    /**
-     * {@inheritDoc}
-     */
+
     @Override
     public boolean isCriteriaValid(Object value) {
         if (value instanceof Double) {
