@@ -11,7 +11,7 @@ import org.w3c.dom.Node;
 /**
  * LaptopXMLFactory class.
  *
- * @author Alex Shevelyanchik
+ * @author Darya Shparko
  * @version 1.0
  */
 public class LaptopXMLFactory extends ApplianceXMLFactory {
