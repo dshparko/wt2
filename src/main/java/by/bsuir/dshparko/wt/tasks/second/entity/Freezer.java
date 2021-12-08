@@ -5,7 +5,7 @@ import java.util.Objects;
  * Freezer class with properties <b>price</b>, <b>freezerCapacity</b>,
  * <b>width</b>, <b>height</b>, <b>depth</b>.
  *
- * @author Alex Shevelyanchik
+ * @author Darya Shparko
  * @version 1.0
  */
 public class Freezer extends Appliance {
